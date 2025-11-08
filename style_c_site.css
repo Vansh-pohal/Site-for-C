@@ -338,23 +338,4 @@ body {
     transition: none !important;
     background-attachment: scroll !important;
   }
-
-  /* Simplify code-box for mobile */
-  .code-box {
-    backdrop-filter: none !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    will-change: auto !important;
-    transition: none !important;
-  }
-
-  /* Disable any background animation or fancy blur */
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  /* Prevent overflow or zoom flicker */
-  html, body {
-    overflow-x: hidden;
-  }
 }
