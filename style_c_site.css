@@ -8,14 +8,24 @@
   font-family: "Inter", sans-serif;
 }
 
-body {
+  body {
   background: linear-gradient(120deg, #e0f7fa, #ffffff, #e3f2fd);
-  background-size: 300% 300%;
-  animation: bgMove 12s ease infinite alternate;
+  background-attachment: fixed;
+  background-size: cover;
+  /* optional: subtle animation only on desktop */
+  animation: none;
   color: #1a1a1a;
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+
+@media (min-width: 800px) {
+  body {
+    animation: bgMove 20s ease infinite alternate;
+  }
+}
+
 
 @keyframes bgMove {
   0% {
@@ -149,7 +159,14 @@ body {
 }
 
 .card {
-  animation: gentleFloat 7s ease-in-out infinite;
+  animation: gentleFloat 10s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (max-width: 700px) {
+  .card {
+    animation: none;
+  }
 }
 
 /* ===== SCROLLBAR ===== */
