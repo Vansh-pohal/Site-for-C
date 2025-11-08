@@ -329,3 +329,32 @@ body {
     margin-top: 10px;
   }
 }
+/* 🌙 MOBILE DEBUG MODE — disable heavy effects */
+@media (max-width: 768px) {
+  /* Make sure page always visible */
+  body {
+    visibility: visible !important;
+    animation: none !important;
+    transition: none !important;
+    background-attachment: scroll !important;
+  }
+
+  /* Simplify code-box for mobile */
+  .code-box {
+    backdrop-filter: none !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    will-change: auto !important;
+    transition: none !important;
+  }
+
+  /* Disable any background animation or fancy blur */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Prevent overflow or zoom flicker */
+  html, body {
+    overflow-x: hidden;
+  }
+}
