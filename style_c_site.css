@@ -8,17 +8,15 @@
   font-family: "Inter", sans-serif;
 }
 
-  body {
+/* ===== BODY ===== */
+body {
   background: linear-gradient(120deg, #e0f7fa, #ffffff, #e3f2fd);
-  background-attachment: fixed;
   background-size: cover;
-  /* optional: subtle animation only on desktop */
-  animation: none;
   color: #1a1a1a;
   min-height: 100vh;
   overflow-x: hidden;
+  animation: none;
 }
-
 
 @media (min-width: 800px) {
   body {
@@ -26,16 +24,13 @@
   }
 }
 
-
 @keyframes bgMove {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -112,6 +107,8 @@
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+  animation: gentleFloat 10s ease-in-out infinite;
+  will-change: transform;
 }
 
 .card h3 {
@@ -145,22 +142,14 @@
   box-shadow: 0 6px 15px rgba(0, 150, 136, 0.3);
 }
 
-/* ===== SOFT FLOATING EFFECT ===== */
+/* ===== FLOAT ANIMATION ===== */
 @keyframes gentleFloat {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-6px);
   }
-}
-
-.card {
-  animation: gentleFloat 10s ease-in-out infinite;
-  will-change: transform;
 }
 
 @media (max-width: 700px) {
@@ -169,80 +158,7 @@
   }
 }
 
-/* ===== SCROLLBAR ===== */
-
-
-/* ===== OCEAN MIST THEME (Question Page) ===== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
-body {
-  background: linear-gradient(120deg, #e0f7fa, #ffffff, #e3f2fd);
-  background-size: 300% 300%;
-  animation: bgMove 12s ease infinite alternate;
-  color: #1a1a1a;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-@keyframes bgMove {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* ===== NAVBAR ===== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 50px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.navbar h1 {
-  font-size: 1.7rem;
-  font-weight: 600;
-  color: #00796b;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #004d40;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  color: #00bfa5;
-}
-
-/* ===== MAIN HEADING ===== */
+/* ===== QUESTION PAGE ===== */
 .main-box {
   padding: 40px 70px;
 }
@@ -342,7 +258,6 @@ body {
     transform: scale(0.9);
     opacity: 0;
   }
-
   100% {
     transform: scale(1);
     opacity: 1;
@@ -372,9 +287,7 @@ body {
   color: #004d40;
   max-height: 17vh;
   overflow-x: auto;
-
 }
-
 
 .close {
   display: inline-block;
@@ -392,9 +305,6 @@ body {
 .close:hover {
   background: #00796b;
 }
-
-/* ===== SCROLLBAR ===== */
-
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 700px) {
