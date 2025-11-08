@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Language Basics</title>
+  <link rel="stylesheet" href="style_c_site.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <h1 id="logo">C Programs</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Topics</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="main-box">
+    <h2 id="heading">STRINGS</h2>
+    <div class="ques-list">
+
+
+      <div class="ques-card">
+        <h3>Q1. Enter a string from user and convert it into uppercase?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q1code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q2. Enter a string from user and convert it into lowercase?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q2code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q3. Enter a string from user and convert it into sentence case?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q3code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q4. Enter a string from user and convert it into title case?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q4code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q5. Enter a string from user and convert it into toggle case?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q5code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q6. Enter a string from user and print the final length of the string?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q6code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q7. Enter two strings from user and compare them?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q7code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q8. Enter two strings from user and concatenate them?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q8code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q9. Enter a string from user and copy that string into another string?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q9code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q10. Enter a string and a number. Print the character at that index, or "Out of bound" if invalid?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q10code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q11. Enter a string from user and print each character in a new line?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q11code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q12. Enter a string from user and copy it in reverse order into another string?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q12code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q13. Enter two strings from user and print difference between each character?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q13code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q14. Enter a string and a character, check if the character exists?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q14code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q15. Enter a string and a character. If exists, print the index (bound number)?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q15code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q16. Enter a string from user and count all vowels?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q16code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q17. Enter a string and an index, print the character at that index?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q17code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q18. Check if a string is palindrome using reverse?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q18code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q19. Enter roll no., name, class, and marks of 5 subjects from user?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q19code')">Show Code</button>
+
+        </div>
+      </div>
+
+
+      <!-- d1  -->
+      <div id="q1code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q1code')">CLOSE</span>
+          <pre id="q1block">
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for(int i=0; str[i]!='\0'; i++)
+        str[i] = toupper(str[i]);
+
+    printf("\nString in uppercase: %s\n", str);
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: hello world
+
+            String in uppercase: HELLO WORLD
+          </p>
+        </div>
+      </div>
+
+      <!--d2-->
+      <div id="q2code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q2code')">CLOSE</span>
+          <pre id="q2block">
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for(int i=0; str[i]!='\0'; i++)
+        str[i] = tolower(str[i]);
+
+    printf("\nString in lowercase: %s\n", str);
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: HELLO WORLD<br><br>
+
+            String in lowercase: hello world
+          </p>
+        </div>
+      </div>
+
+      <!--d3-->
+      <div id="q3code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q3code')">CLOSE</span>
+          <pre id="q3block">
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    if(str[0] != '\0')
+        str[0] = toupper(str[0]);
+
+    for(int i=1; str[i]!='\0'; i++)
+        str[i] = tolower(str[i]);
+
+    printf("\nString in sentence case: %s\n", str);
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: hELLO wORLD<br><br>
+
+            String in sentence case: Hello world
+          </p>
+        </div>
+      </div>
+
+      <!--d4-->
+
+      <div id="q4code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q4code')">CLOSE</span>
+          <pre id="q4block">
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    int capNext = 1;
+    for(int i=0; str[i]!='\0'; i++){
+        if(isspace(str[i]))
+            capNext = 1;
+        else if(capNext){
+            str[i] = toupper(str[i]);
+            capNext = 0;
+        } else {
+            str[i] = tolower(str[i]);
+        }
+    }
+
+    printf("\nString in title case: %s\n", str);
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: hello world from C<br><br>
+
+            String in title case: Hello World From C
+          </p>
+        </div>
+      </div>
+
+
+      <!--d5-->
+
+      <div id="q5code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q5code')">CLOSE</span>
+          <pre id="q5block">
+#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for(int i=0; str[i]!='\0'; i++){
+        if(islower(str[i]))
+            str[i] = toupper(str[i]);
+        else if(isupper(str[i]))
+            str[i] = tolower(str[i]);
+    }
+
+    printf("\nString in toggle case: %s\n", str);
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: Hello World<br><br>
+
+            String in toggle case: hELLO wORLD
+          </p>
+        </div>
+      </div>
+
+
+      <!--d6-->
+
+      <div id="q6code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q6code')">CLOSE</span>
+          <pre id="q6block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    int len = 0;
+    while(str[len] != '\0' && str[len] != '\n') len++;
+
+    printf("\nLength of the string: %d\n", len);
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: Hello World<br><br>
+
+            Length of the string: 11
+          </p>
+        </div>
+      </div>
+
+
+      <!--d7-->
+
+      <div id="q7code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q7code')">CLOSE</span>
+          <pre id="q7block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str1[100], str2[100];
+    printf("Enter first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    printf("Enter second string: ");
+    fgets(str2, sizeof(str2), stdin);
+
+    // Remove newline characters
+    str1[strcspn(str1, "\n")] = 0;
+    str2[strcspn(str2, "\n")] = 0;
+
+    int cmp = strcmp(str1, str2);
+    if(cmp == 0)
+        printf("\nStrings are equal.\n");
+    else
+        printf("\nStrings are not equal.\n");
+
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter first string: Hello <br>
+            Enter second string: Hello<br><br>
+
+            Strings are equal.
+          </p>
+        </div>
+      </div>
+
+
+      <!--d8-->
+
+      <div id="q8code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q8code')">CLOSE</span>
+          <pre id="q8block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str1[100], str2[100];
+    printf("Enter first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    printf("Enter second string: ");
+    fgets(str2, sizeof(str2), stdin);
+
+    str1[strcspn(str1, "\n")] = 0;
+    str2[strcspn(str2, "\n")] = 0;
+
+    strcat(str1, str2);
+
+    printf("\nConcatenated string: %s\n", str1);
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter first string: Hello <br>
+            Enter second string: World<br><br>
+
+            Concatenated string: HelloWorld
+          </p>
+        </div>
+      </div>
+
+      <!--d9-->
+
+      <div id="q9code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q9code')">CLOSE</span>
+          <pre id="q9block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str1[100], str2[100];
+    printf("Enter a string: ");
+    fgets(str1, sizeof(str1), stdin);
+
+    str1[strcspn(str1, "\n")] = 0;
+    strcpy(str2, str1);
+
+    printf("\nCopied string: %s\n", str2);
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: Hello<br><br>
+
+            Copied string: Hello
+          </p>
+        </div>
+      </div>
+
+      <!--d10-->
+
+      <div id="q10code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q10code')">CLOSE</span>
+          <pre id="q10block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str[100];
+    int index;
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    printf("Enter index: ");
+    scanf("%d", &index);
+
+    int len = strlen(str);
+    if(index &lt; 0 || index &gt;= len-1)
+        printf("\nOut of bound\n");
+    else
+        printf("\nCharacter at index %d: %c\n", index, str[index]);
+
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: Hello <br>
+            Enter index: 1<br><br>
+
+            Character at index 1: e
+          </p>
+        </div>
+      </div>
+
+
+      <!--d11-->
+
+      <div id="q11code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q11code')">CLOSE</span>
+          <pre id="q11block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    printf("\nCharacters in the string:\n");
+    for(int i=0; str[i] != '\0' && str[i] != '\n'; i++) {
+        printf("%c\n", str[i]);
+    }
+
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: Hello<br><br>
+
+            Characters in the string:
+            H <br>
+            e <br>
+            l <br>
+            l <br>
+            o<br>
+          </p>
+        </div>
+      </div>
+
+
+      <!--d12-->
+
+      <div id="q12code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q12code')">CLOSE</span>
+          <pre id="q12block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str[100], rev[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    int len = strlen(str);
+    if(str[len-1] == '\n') len--;
+
+    for(int i=0; i&lt;len; i++) {
+        rev[i] = str[len-1-i];
+    }
+    rev[len] = '\0';
+
+    printf("\nReversed string: %s\n", rev);
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: Hello<br><br>
+
+            Reversed string: olleH
+          </p>
+        </div>
+      </div>
+
+
+      <!--d13-->
+
+      <div id="q13code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q13code')">CLOSE</span>
+          <pre id="q13block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str1[100], str2[100];
+    printf("Enter first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    printf("Enter second string: ");
+    fgets(str2, sizeof(str2), stdin);
+
+    str1[strcspn(str1, "\n")] = 0;
+    str2[strcspn(str2, "\n")] = 0;
+
+    printf("\nCharacter differences:\n");
+    for(int i=0; i&lt;strlen(str1) &amp;&amp; i&lt;strlen(str2); i++) {
+        printf("%c - %c = %d\n", str1[i], str2[i], str1[i]-str2[i]);
+    }
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter first string: Hello <br>
+            Enter second string: World<br><br>
+
+            Character differences: <br>
+            H - W = -15 <br>
+            e - o = -10 <br>
+            l - r = -6 <br>
+            l - l = 0 <br>
+            o - d = 11
+          </p>
+        </div>
+      </div>
+
+
+      <!--d14-->
+
+      <div id="q14code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q14code')">CLOSE</span>
+          <pre id="q14block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str[100], ch;
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    printf("Enter a character to search: ");
+    scanf("%c", &amp;ch);
+
+    int found = 0;
+    for(int i=0; str[i] != '\0' &amp;&amp; str[i] != '\n'; i++) {
+        if(str[i] == ch) {
+            found = 1;
+            break;
+        }
+    }
+
+    if(found)
+        printf("\nCharacter '%c' exists in the string.\n", ch);
+    else
+        printf("\nCharacter '%c' does not exist in the string.\n", ch);
+
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: Hello <br>
+            Enter a character to search: e<br><br>
+
+            Character 'e' exists in the string.
+          </p>
+        </div>
+      </div>
+
+
+      <!--15-->
+
+      <div id="q15code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q15code')">CLOSE</span>
+          <pre id="q15block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str[100], ch;
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    printf("Enter a character to find index: ");
+    scanf("%c", &amp;ch);
+
+    str[strcspn(str, "\n")] = 0;
+
+    int index = -1;
+    for(int i=0; str[i] != '\0'; i++) {
+        if(str[i] == ch) {
+            index = i;
+            break;
+        }
+    }
+
+    if(index != -1)
+        printf("\nCharacter '%c' found at index %d\n", ch, index);
+    else
+        printf("\nCharacter '%c' not found\n", ch);
+
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: Hello <br>
+            Enter a character to find index: l<br><br>
+
+            Character 'l' found at index 2
+          </p>
+        </div>
+      </div>
+
+      <!--d16-->
+
+      <div id="q16code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q16code')">CLOSE</span>
+          <pre id="q16block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    int count = 0;
+    for(int i=0; str[i] != '\0' &amp;&amp; str[i] != '\n'; i++) {
+        char ch = str[i];
+        if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'<br>||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+            count++;
+    }
+
+    printf("\nNumber of vowels: %d\n", count);
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: Hello World<br><br>
+
+            Number of vowels: 3
+          </p>
+        </div>
+      </div>
+
+
+      <!--d17-->
+
+      <div id="q17code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q17code')">CLOSE</span>
+          <pre id="q17block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str[100];
+    int index;
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    printf("Enter index: ");
+    scanf("%d", &amp;index);
+
+    int len = strlen(str);
+    if(index &lt; 0 || index &gt;= len-1)
+        printf("\nOut of bound\n");
+    else
+        printf("\nCharacter at index %d: %c\n", index, str[index]);
+
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: Hello <br>
+            Enter index: 4<br><br>
+
+            Character at index 4: o
+          </p>
+        </div>
+      </div>
+
+      <!--d18-->
+
+      <div id="q18code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q18code')">CLOSE</span>
+          <pre id="q18block">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char str[100], rev[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    int len = strlen(str);
+    if(str[len-1]=='\n') len--;
+
+    for(int i=0; i&lt;len; i++)
+        rev[i] = str[len-1-i];
+    rev[len] = '\0';
+
+    if(strncmp(str, rev, len) == 0)
+        printf("\nString is a palindrome.\n");
+    else
+        printf("\nString is not a palindrome.\n");
+
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter a string: level<br><br>
+
+            String is a palindrome.
+          </p>
+        </div>
+      </div>
+
+      <!--d19-->
+
+      <div id="q19code" class="code-box">
+        <div class="inner-code">
+          <span class="close" onclick="hideCode('q19code')">CLOSE</span>
+          <pre id="q19block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int roll;
+    char name[50], className[20];
+    int marks[5];
+
+    printf("Enter roll number: ");
+    scanf("%d", &amp;roll);
+    getchar(); // consume newline
+
+    printf("Enter name: ");
+    fgets(name, sizeof(name), stdin);
+    name[strcspn(name,"\n")] = 0;
+
+    printf("Enter class: ");
+    fgets(className, sizeof(className), stdin);
+    className[strcspn(className,"\n")] = 0;
+
+    for(int i=0; i&lt;5; i++){
+        printf("Enter marks of subject %d: ", i+1);
+        scanf("%d", &amp;marks[i]);
+    }
+
+    printf("\nStudent Info:\nRoll No: %d\nName: %s\nClass: %s\nMarks: ", roll, name, className);
+    for(int i=0; i&lt;5; i++) printf("%d ", marks[i]);
+    printf("\n");
+
+    return 0;
+}
+    </pre>
+          <p class="output-text">Output:
+            Enter roll number: 1 <br>
+            Enter name: Alice <br>
+            Enter class: 12A <br>
+            Enter marks of subject 1: 90 <br>
+            Enter marks of subject 2: 85 <br>
+            Enter marks of subject 3: 88 <br>
+            Enter marks of subject 4: 92 <br>
+            Enter marks of subject 5: 80 <br><br>
+
+            Student Info: <br>
+            Roll No: 1 <br>
+            Name: Alice <br>
+            Class: 12A <br>
+            Marks: 90 85 88 92 80
+          </p>
+        </div>
+      </div>
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function showCode(id) {
+      const box = document.getElementById(id);
+      box.style.opacity = 1;
+      box.style.pointerEvents = "auto"; // make it clickable
+    }
+
+    function hideCode(id) {
+      const box = document.getElementById(id);
+      box.style.opacity = 0;
+      box.style.pointerEvents = "none"; // disable interaction
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Language Basics</title>
+  <link rel="stylesheet" href="style_c_site.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 id="logo">C Programs</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Topics</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="main-box">
+    <h2 id="heading">ITERATIVE CONTROL STRUCTURE (LOOPS)</h2>
+<!-- Q1–Q10 with sample outputs -->
+<div class="ques-list">
+
+  <!-- Q1 -->
+  <div class="ques-card">
+    <h3>Q1. Enter a number from the user and find out the binary of that number?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q1code')">Show Code</button>
+
+    </div>
+  </div>
+  <div id="q1code" class="code-box">
+    <div class="inner-code">
+      <span class="close" onclick="hideCode('q1code')">CLOSE</span>
+      <pre id="q1block">
+#include &lt;stdio.h&gt;
+int main(){
+    int n, bin[32], i=0;
+    printf("Enter a number: "); scanf("%d", &n);
+    while(n&gt;0){
+        bin[i++] = n % 2;
+        n /= 2;
+    }
+    printf("Binary: ");
+    for(int j=i-1; j&gt;=0; j--) printf("%d", bin[j]);
+    return 0;
+}
+      </pre>
+      <p class="output-text">Output: Binary: 101011 (for input 43)</p>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="ques-card">
+    <h3>Q2. Enter a number from the user and check that the number is divisible by any prime number or not?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q2code')">Show Code</button>
+
+    </div>
+  </div>
+  <div id="q2code" class="code-box">
+    <div class="inner-code">
+      <span class="close" onclick="hideCode('q2code')">CLOSE</span>
+      <pre id="q2block">
+#include &lt;stdio.h&gt;
+int main(){
+    int n, flag=0;
+    printf("Enter a number: "); scanf("%d", &n);
+    int primes[] = {2,3,5,7,11,13,17,19,23,29,31};
+    for(int i=0; i&lt;11; i++){
+        if(n % primes[i] == 0){ flag = 1; break; }
+    }
+    if(flag) printf("%d is divisible by a prime number\n", n);
+    else printf("%d is not divisible by any prime number\n", n);
+    return 0;
+}
+      </pre>
+      <p class="output-text">Output: 77 is divisible by a prime number</p>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="ques-card">
+    <h3>Q3. Enter a number from the user and check it is a prime number or not?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q3code')">Show Code</button>
+
+    </div>
+  </div>
+  <div id="q3code" class="code-box">
+    <div class="inner-code">
+      <span class="close" onclick="hideCode('q3code')">CLOSE</span>
+      <pre id="b3block">
+#include &lt;stdio.h&gt;
+int main(){
+    int n, flag=0;
+    printf("Enter a number: "); scanf("%d", &n);
+    for(int i=2; i&lt;=n/2; i++){
+        if(n % i == 0){ flag = 1; break; }
+    }
+    if(n &lt;= 1) flag = 1;
+    if(flag) printf("%d is not prime\n", n);
+    else printf("%d is prime\n", n);
+    return 0;
+}
+      </pre>
+      <p class="output-text">Output: 29 is prime</p>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="ques-card">
+    <h3>Q4. Enter a number from the user and print all digits of the number in separate lines?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q4code')">Show Code</button>
+
+    </div>
+  </div>
+  <div id="q4code" class="code-box">
+    <div class="inner-code">
+      <span class="close" onclick="hideCode('q4code')">CLOSE</span>
+      <pre id="q4block">
+#include &lt;stdio.h&gt;
+int main(){
+    int n; scanf("%d", &n);
+    int rev=0, temp=n;
+    while(temp&gt;0){
+        rev = rev*10 + temp%10;
+        temp/=10;
+    }
+    while(rev&gt;0){
+        printf("%d\n", rev%10);
+        rev/=10;
+    }
+    return 0;
+}
+      </pre>
+      <p class="output-text">Output:
+4<br>
+3<br>
+5<br>
+2 (for input 2534)</p>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="ques-card">
+    <h3>Q5. Write a program to print your name 1 lakh times?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q5code')">Show Code</button>
+
+    </div>
+  </div>
+  <div id="q5code" class="code-box">
+    <div class="inner-code">
+      <span class="close" onclick="hideCode('q5code')">CLOSE</span>
+      <pre id="q5block">
+#include &lt;stdio.h&gt;
+int main(){
+    for(int i=0;i&lt;100000;i++) printf("Alice\n");
+    return 0;
+}
+      </pre>
+      <p class="output-text">Output: Alice (printed 100000 times)</p>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="ques-card">
+    <h3>Q6. Write a program to print a series from 1 to 1 lakh?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q6code')">Show Code</button>
+
+    </div>
+  </div>
+  <div id="q6code" class="code-box">
+    <div class="inner-code">
+      <span class="close" onclick="hideCode('q6code')">CLOSE</span>
+      <pre id="q6block">
+#include &lt;stdio.h&gt;
+int main(){
+    for(int i=1;i&lt;=100000;i++) printf("%d ", i);
+    return 0;
+}
+      </pre>
+      <p class="output-text">Output: 1 2 3 ... 99999 100000</p>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="ques-card">
+    <h3>Q7. Enter a number from the user and print the series from 1 to that number?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q7code')">Show Code</button>
+
+    </div>
+  </div>
+  <div id="q7code" class="code-box">
+    <div class="inner-code">
+      <span class="close" onclick="hideCode('q7code')">CLOSE</span>
+      <pre id="q7block">
+#include &lt;stdio.h&gt;
+int main(){
+    int n; scanf("%d", &n);
+    for(int i=1;i&lt;=n;i++) printf("%d ", i);
+    return 0;
+}
+      </pre>
+      <p class="output-text">Output: 1 2 3 4 5 (for input 5)</p>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="ques-card">
+    <h3>Q8. Enter a number from the user and print that number 100 times?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q8code')">Show Code</button>
+
+    </div>
+  </div>
+  <div id="q8code" class="code-box">
+    <div class="inner-code">
+      <span class="close" onclick="hideCode('q8code')">CLOSE</span>
+      <pre id="q8block">
+#include &lt;stdio.h&gt;
+int main(){
+    int n; scanf("%d", &n);
+    for(int i=0;i&lt;100;i++) printf("%d ", n);
+    return 0;
+}
+      </pre>
+      <p class="output-text">Output: 7 7 7 ... 7 (100 times, for input 7)</p>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="ques-card">
+    <h3>Q9. Write a program to print all odd numbers between 1 and 100?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q9code')">Show Code</button>
+
+    </div>
+  </div>
+  <div id="q9code" class="code-box">
+    <div class="inner-code">
+      <span class="close" onclick="hideCode('q9code')">CLOSE</span>
+      <pre id="q9block">
+#include &lt;stdio.h&gt;
+int main(){
+    for(int i=1;i&lt;=100;i+=2) printf("%d ", i);
+    return 0;
+}
+      </pre>
+      <p class="output-text">Output: 1 3 5 7 ... 99</p>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="ques-card">
+    <h3>Q10. Write a program to print the table of 4 in the format (till 20) — 4*1=4 and so on?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q10code')">Show Code</button>
+
+    </div>
+  </div>
+  <div id="q10code" class="code-box">
+    <div class="inner-code">
+      <span class="close" onclick="hideCode('q10code')">CLOSE</span>
+      <pre id="q10block">
+#include &lt;stdio.h&gt;
+int main(){
+    for(int i=1;i&lt;=20;i++) printf("4*%d=%d\n", i, 4*i);
+    return 0;
+}
+      </pre>
+      <p class="output-text">Output: 4*1=4 4*2=8 ... 4*20=80</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script >
+function showCode(id) {
+  const box = document.getElementById(id);
+  box.style.opacity = 1;
+  box.style.pointerEvents = "auto"; // make it clickable
+}
+
+function hideCode(id) {
+  const box = document.getElementById(id);
+  box.style.opacity = 0;
+  box.style.pointerEvents = "none"; // disable interaction
+}
+  </script>
+</body>
+</html>

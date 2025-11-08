@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Language Basics</title>
+  <link rel="stylesheet" href="style_c_site.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <h1 id="logo">C Programs</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Topics</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="main-box">
+    <h2 id="heading">BASIC INPUT OUTPUT</h2>
+    <div class="ques-list">
+
+      <div class="ques-card">
+        <h3>Q1. Write a program to print the message: Today I made my first C Program.</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q1code')">Show Code</button>
+          
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q2. Write a program to read a character from the keyboard and display it on the screen.</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q2code')">Show Code</button>
+          
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q3. Write a program to read only 4 characters from the keyboard and display it on the screen in a separate
+          line.</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q3code')">Show Code</button>
+          
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q4. Write a program to print your name at center of the first line.</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q4code')">Show Code</button>
+          
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q5. Write a program to store single quote and print that variable to show single quote on output screen.
+        </h3>
+        <div class="btn-area">
+          <button onclick="showCode('q5code')">Show Code</button>
+          
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q6. Write a program for printing your name on output screen but your name should blink 5 times.</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q6code')">Show Code</button>
+          
+        </div>
+      </div>
+
+
+
+      <div class="ques-card">
+        <h3>Q7. Write the program to display this output?<br>
+          #include&lt;stdio.h&gt;<br>
+          #include&lt;conio.h&gt;<br>
+          #include&lt;dos.h&gt;<br>
+          void main()<br>
+          {<br>
+          clrscr();<br>
+          printf("hello, welcome to c");<br>
+          delay(5000);<br>
+          }</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q7code')">Show Code</button>
+          
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q8. Write a program to print your name at the center of the page.</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q8code')">Show Code</button>
+          
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q9. Enter password display like ******.</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q9code')">Show Code</button>
+          
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q10. Enter two characters from user and print ASCII value.</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q10code')">Show Code</button>
+          
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q11. Print all ASCII characters from 0 to 127.</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q11code')">Show Code</button>
+          
+        </div>
+      </div>
+
+
+    </div>
+    <!-- d1  -->
+    <div id="q1code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q1code')">ClOSE</span>
+        <pre id="q1block">
+#include &lt;stdio.h&gt;
+int main(){
+   // print messege on screen
+   printf("Today I made my first C Program.");
+   return 0;
+}
+        </pre>
+        <p class="output-text">Output: Today I made my first C Program.</p>
+      </div>
+    </div>
+
+    <!-- d2  -->
+    <div id="q2code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q2code')">close</span>
+        <pre id="q2block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    char ch;
+
+    printf("Enter a character: ");
+    scanf("%c", &ch);  // reads a single character input
+
+    printf("You entered: %c\n", ch);
+
+    return 0;
+}
+
+        </pre>
+        <p class="output-text">Output: Enter a character: C<br>
+          You entered: C</p>
+      </div>
+    </div>
+    <!--- d3  -->
+    <div id="q3code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q3code')">close</span>
+        <pre id="q3lock">
+#include &lt;stdio.h&gt;
+
+int main() {
+    char a, b, c, d;
+
+    printf("Enter 4 characters: ");
+    scanf("%c%c%c%c", &a, &b, &c, &d);
+
+    printf("You entered:\n");
+    printf("%c\n%c\n%c\n%c\n", a, b, c, d);
+
+    return 0;
+}
+
+
+        </pre>
+        <p class="output-text">Output: Enter 4 characters: abcd
+          <br>
+          You entered:
+          a
+          b
+          c
+          d
+        </p>
+      </div>
+    </div>
+    <!--- d4  -->
+    <div id="q4code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q4code')">close</span>
+        <pre id="q4lock">
+           #include &lt;stdio.h&gt;
+
+            int main() {
+              printf("\t\t\t\t\tVansh"); // add spaces before your name to center it
+               return 0;
+            }
+
+        </pre>
+        <p class="output-text">Output: <img src="center line C.png" height="200vh" width="700vw" style="border-radius: 10px;">
+        </p>
+      </div>
+    </div>
+    <!--- d5  -->
+    <div id="q5code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q5code')">close</span>
+        <pre id="q5lock">
+           #include &lt;stdio.h&gt;
+
+int main() {
+    char ch = '\'';  // use backslash to escape the single quote
+
+    printf("The character is: %c\n", ch);
+
+    return 0;
+}
+
+
+        </pre>
+        <p class="output-text">Output: The character is: '</p>
+      </div>
+    </div>
+    <!--- d6  -->
+    <div id="q6code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q6code')">close</span>
+        <pre id="q6lock">
+           #include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;  // for delay()
+
+int main() {
+    int i;
+    for(i = 0; i &lt; 5; i++) {
+        printf("Vansh\n");   // print your name
+        delay(500);            // wait 0.5 seconds
+        clrscr();              // clear screen
+    }
+    return 0;
+}
+
+
+        </pre>
+        <p class="output-text">Output: Vansh
+        </p>
+      </div>
+    </div> 
+
+    <!--- d7 -->
+    <div id="q7code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q7code')">Close</span>
+        <pre id="q7lock">
+           #include &lt;stdio.h&gt;
+#include &lt;conio.h&gt; // for clrscr() and getch()
+#include &lt;dos.h&gt;   // for delay() function
+
+void main()
+{
+    clrscr();                       // clear the screen
+    printf("hello, welcome to c");  // print the message
+    delay(5000);                    // delay for 5000 milliseconds (5 seconds)
+    getch();                        // wait for a key press (optional)
+}
+
+        </pre>
+        <p class="output-text">Output: hello, welcome to c
+        </p>
+      </div>
+    </div>
+    <!--- d8  -->
+    <div id="q8code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q8code')">Close</span>
+        <pre id="q8lock">
+           #include &lt;stdio.h&gt;
+
+void main()
+{
+    printf("\n\n\n\n\n\n\n\n\n\n\n\n");  // move name down
+    printf("\t\t\t\tVansh");           // move name to center
+}
+
+
+        </pre>
+        <p class="output-text">Output: <img src="center page C.png" height="400vh" width="800vw" style="border-radius: 10px;">
+
+        </p>
+      </div>
+    </div>
+   
+    <!--- d9  -->
+    <div id="q9code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q9code')">close</span>
+        <pre id="q9lock">
+           #include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;  // for getch()
+
+void main()
+{
+    char pass[20];
+    int i = 0;
+    char ch;
+
+    printf("Enter password: ");
+    while (1)
+    {
+        ch = getch();           // reads a character without showing it
+        if (ch == 13)           // if Enter is pressed (ASCII 13)
+            break;
+        pass[i] = ch;
+        i++;
+        printf("*");            // show * instead of the character
+    }
+    pass[i] = '\0';             // terminate the string
+
+    printf("\nYour password is: %s", pass); 
+}
+        </pre>
+        <p class="output-text">Output: Enter password: ********<br>
+          Your password is: mypass
+        </p>
+      </div>
+    </div>
+    <!--- d10  -->
+    <div id="q10code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q10code')">close</span>
+        <pre id="q10lock">
+           #include `&lt;stdio.h&gt;
+
+void main()
+{
+    char a, b;
+
+    printf("Enter first character: ");
+    scanf("%c", &a);
+
+    printf("Enter second character: ");
+    scanf(" %c", &b);   // note the space before %c to skip newline
+
+    printf("\nASCII value of '%c' = %d", a, a);
+    printf("\nASCII value of '%c' = %d", b, b);
+}
+
+        </pre>
+        <p class="output-text">Output: Enter first character: A<br>
+          Enter second character: B<br>
+
+          ASCII value of 'A' = 65<br>
+          ASCII value of 'B' = 66
+
+        </p>
+      </div>
+    </div>
+    <!--- d11  -->
+    <div id="q11code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q11code')">close</span>
+        <pre id="q11lock">
+           #include &lt;stdio.h&gt;
+
+void main()
+{
+    int i;
+    for(i = 0; i &lt;= 127; i++)
+    {
+        printf("ASCII value of %3d = %c\n", i, i);
+    }
+}
+
+
+        </pre>
+        <p class="output-text">Output: ASCII value of 0 =
+          ASCII value of 1 =<br>
+          ASCII value of 2 =<br>
+          ...<br>
+          ASCII value of 65 = A<br>
+          ASCII value of 66 = B<br>
+          ...<br>
+          ASCII value of 127 = DEL<br><br>
+          <ul>
+Notes:
+
+<li>ASCII 0-31 are non-printable control characters (so they may look blank or weird).</li>
+<li>32-126 are the normal visible ones — like letters, digits, and symbols.</li>
+<li>127 is the DEL (delete) character.</li>
+</ul>
+        </p>
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function showCode(id) {
+      const box = document.getElementById(id);
+      box.style.opacity = 1;
+      box.style.pointerEvents = "auto"; // make it clickable
+    }
+
+    function hideCode(id) {
+      const box = document.getElementById(id);
+      box.style.opacity = 0;
+      box.style.pointerEvents = "none"; // disable interaction
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Language Basics</title>
+  <link rel="stylesheet" href="style_c_site.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 id="logo">C Programs</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Topics</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="main-box">
+    <h2 id="heading">UNION</h2>
+<div class="ques-list">
+
+  <div class="ques-card">
+    <h3>NO QUESTIONS AVAILABLE  RIGHT NOW!</h3>
+    <div class="btn-area">
+  
+    </div>
+  </div>
+
+
+
+    <!-- c1  -->
+    <div id="q1code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q1code')">CLOSE</span>
+        <pre id="q1block">
+#include &lt;stdio.h&gt;
+int main(){
+   // print messege on screen
+   printf("Helo World");
+   return 0;
+}
+        </pre>
+        <p class="output-text">Output: Helo World</p>
+      </div>
+    </div>
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script >
+function showCode(id) {
+  const box = document.getElementById(id);
+  box.style.opacity = 1;
+  box.style.pointerEvents = "auto"; // make it clickable
+}
+
+function hideCode(id) {
+  const box = document.getElementById(id);
+  box.style.opacity = 0;
+  box.style.pointerEvents = "none"; // disable interaction
+}
+  </script>
+</body>
+</html>

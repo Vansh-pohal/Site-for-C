@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Language Basics</title>
+  <link rel="stylesheet" href="style_c_site.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 id="logo">C Programs</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Topics</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="main-box">
+    <h2 id="heading">FUNCTIONS</h2>
+<div class="ques-list">
+
+  <div class="ques-card">
+    <h3>Q1. Write a program to enter 2 numbers from the user, add them and display the answer. Again enter 2 numbers and subtract them and display the answer, again enter 2 numbers and add them, again enter 2 numbers and multiply them, again enter 2 numbers and subtract them, again enter 2 numbers and multiply them, again enter 2 numbers and divide them, again enter 2 numbers and divide them, again enter 2 numbers and add them and display the answer?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q1code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q2. Write a program to enter 10 numbers from the user, add all the numbers and display the answer?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q2code')">Show Code</button>
+
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q3. Write a program to return an array from a function?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q3code')">Show Code</button>
+
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q4. Make the following programs using local and global variables — Factorial, Reverse, Palindrome, Prime Numbers, Armstrong, and Fibonacci?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q4code')">Show Code</button>
+
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q5. Swap two numbers using Call by Address?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q5code')">Show Code</button>
+
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q6. Swap two numbers using Call by Function?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q6code')">Show Code</button>
+
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q7. Make a function to find out the power of a number. Enter the number and power from the user?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q7code')">Show Code</button>
+
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q8. Make a function to find out the cube of a user-entered number?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q8code')">Show Code</button>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Q1 -->
+<div id="q1code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q1code')">CLOSE</span>
+    <pre id="q1block">
+#include &lt;stdio.h&gt;
+
+int add(int a, int b){ return a + b; }
+int sub(int a, int b){ return a - b; }
+int mul(int a, int b){ return a * b; }
+float divi(float a, float b){ return a / b; }
+
+int main(){
+    int a,b;
+    printf("Enter 2 numbers for addition: ");
+    scanf("%d%d",&a,&b);
+    printf("Sum = %d\n", add(a,b));
+
+    printf("Enter 2 numbers for subtraction: ");
+    scanf("%d%d",&a,&b);
+    printf("Subtraction = %d\n", sub(a,b));
+
+    printf("Enter 2 numbers for multiplication: ");
+    scanf("%d%d",&a,&b);
+    printf("Multiplication = %d\n", mul(a,b));
+
+    printf("Enter 2 numbers for division: ");
+    scanf("%d%d",&a,&b);
+    printf("Division = %.2f\n", divi(a,b));
+    return 0;
+}
+    </pre>
+    <p class="output-text">
+Enter 2 numbers for addition: 4 7<br>
+Sum = 11<br>
+Enter 2 numbers for subtraction: 10 6<br>
+Subtraction = 4<br>
+Enter 2 numbers for multiplication: 5 3<br>
+Multiplication = 15<br>
+Enter 2 numbers for division: 20 4<br>
+Division = 5.00
+    </p>
+  </div>
+</div>
+
+<!-- Q2 -->
+<div id="q2code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q2code')">CLOSE</span>
+    <pre id="q2block">
+#include &lt;stdio.h&gt;
+
+int sumArray(int arr[], int n){
+    int sum = 0;
+    for(int i=0; i&lt;n; i++)
+        sum += arr[i];
+    return sum;
+}
+
+int main(){
+    int arr[10];
+    printf("Enter 10 numbers: ");
+    for(int i=0;i&lt;10;i++)
+        scanf("%d",&arr[i]);
+    printf("Sum = %d", sumArray(arr,10));
+    return 0;
+}
+    </pre>
+    <p class="output-text">
+Enter 10 numbers: 1 2 3 4 5 6 7 8 9 10<br>
+Sum = 55
+    </p>
+  </div>
+</div>
+
+<!-- Q3 -->
+<div id="q3code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q3code')">CLOSE</span>
+    <pre id="q3block">
+#include &lt;stdio.h&gt;
+
+int* getArray(){
+    static int arr[5] = {10,20,30,40,50};
+    return arr;
+}
+
+int main(){
+    int *ptr = getArray();
+    printf("Array elements are: ");
+    for(int i=0;i&lt;5;i++)
+        printf("%d ", ptr[i]);
+    return 0;
+}
+    </pre>
+    <p class="output-text">
+Array elements are: 10 20 30 40 50
+    </p>
+  </div>
+</div>
+
+<!-- Q4 -->
+<div id="q4code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q4code')">CLOSE</span>
+    <pre id="q4block">
+#include &lt;stdio.h&gt;
+
+int n; // global variable
+
+int factorial(int x){
+    int f=1;
+    for(int i=1;i&lt;=x;i++) f*=i;
+    return f;
+}
+
+int reverse(int x){
+    int rev=0;
+    while(x!=0){ rev=rev*10+x%10; x/=10; }
+    return rev;
+}
+
+int isPalindrome(int x){ return x==reverse(x); }
+
+int isPrime(int x){
+    if(x&lt;2) return 0;
+    for(int i=2;i&lt;x;i++)
+        if(x%i==0) return 0;
+    return 1;
+}
+
+int isArmstrong(int x){
+    int temp=x,sum=0,r;
+    while(temp&gt;0){
+        r=temp%10;
+        sum+=r*r*r;
+        temp/=10;
+    }
+    return x==sum;
+}
+
+void fibonacci(int terms){
+    int a=0,b=1,c;
+    printf("Fibonacci: ");
+    for(int i=0;i&lt;terms;i++){
+        printf("%d ",a);
+        c=a+b;
+        a=b;
+        b=c;
+    }
+}
+
+int main(){
+    n=5;
+    printf("Factorial of %d = %d\n",n,factorial(n));
+    printf("Reverse of 1234 = %d\n", reverse(1234));
+    printf("121 Palindrome? %s\n", isPalindrome(121)? "Yes":"No");
+    printf("7 Prime? %s\n", isPrime(7)? "Yes":"No");
+    printf("153 Armstrong? %s\n", isArmstrong(153)? "Yes":"No");
+    fibonacci(7);
+    return 0;
+}
+    </pre>
+    <p class="output-text">
+Factorial of 5 = 120<br>
+Reverse of 1234 = 4321<br>
+121 Palindrome? Yes<br>
+7 Prime? Yes<br>
+153 Armstrong? Yes<br>
+Fibonacci: 0 1 1 2 3 5 8
+    </p>
+  </div>
+</div>
+
+<!-- Q5 -->
+<div id="q5code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q5code')">CLOSE</span>
+    <pre id="q5block">
+#include &lt;stdio.h&gt;
+
+void swap(int *x, int *y){
+    int temp=*x;
+    *x=*y;
+    *y=temp;
+}
+
+int main(){
+    int a=5,b=9;
+    printf("Before swap: a=%d, b=%d\n",a,b);
+    swap(&a,&b);
+    printf("After swap: a=%d, b=%d\n",a,b);
+    return 0;
+}
+    </pre>
+    <p class="output-text">
+Before swap: a=5, b=9<br>
+After swap: a=9, b=5
+    </p>
+  </div>
+</div>
+
+<!-- Q6 -->
+<div id="q6code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q6code')">CLOSE</span>
+    <pre id="q6block">
+#include &lt;stdio.h&gt;
+
+void swapFunc(){
+    int a,b,temp;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    printf("Before swap: a=%d, b=%d\n",a,b);
+    temp=a;
+    a=b;
+    b=temp;
+    printf("After swap: a=%d, b=%d",a,b);
+}
+
+int main(){
+    swapFunc();
+    return 0;
+}
+    </pre>
+    <p class="output-text">
+Enter two numbers: 4 8<br>
+Before swap: a=4, b=8<br>
+After swap: a=8, b=4
+    </p>
+  </div>
+</div>
+
+<!-- Q7 -->
+<div id="q7code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q7code')">CLOSE</span>
+    <pre id="q7block">
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main(){
+    int base,power;
+    printf("Enter base and power: ");
+    scanf("%d%d",&base,&power);
+    printf("Result = %.0f", pow(base,power));
+    return 0;
+}
+    </pre>
+    <p class="output-text">
+Enter base and power: 3 4<br>
+Result = 81
+    </p>
+  </div>
+</div>
+
+<!-- Q8 -->
+<div id="q8code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q8code')">CLOSE</span>
+    <pre id="q8block">
+#include &lt;stdio.h&gt;
+
+int cube(int n){
+    return n*n*n;
+}
+
+int main(){
+    int num;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    printf("Cube = %d", cube(num));
+    return 0;
+}
+    </pre>
+    <p class="output-text">
+Enter a number: 6<br>
+Cube = 216
+    </p>
+  </div>
+</div>
+
+  </section>
+
+<script>
+function showCode(id) {
+  const box = document.getElementById(id);
+  box.style.opacity = 1;
+  box.style.pointerEvents = "auto";
+}
+function hideCode(id) {
+  const box = document.getElementById(id);
+  box.style.opacity = 0;
+  box.style.pointerEvents = "none";
+}
+</script>
+
+</body>
+</html>

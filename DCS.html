@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Language Basics</title>
+  <link rel="stylesheet" href="style_c_site.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 id="logo">C Programs</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Topics</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="main-box">
+    <h2 id="heading">DECISION CONTROL STRUCTURE</h2>
+
+    <div class="ques-list">
+
+  <div class="ques-card">
+    <h3>Q1. Write a program to enter the number from the user and check it is positive or negative or 0 (zero)?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q1code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q2. Enter a number from user and check it is odd or even?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q2code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q3. Enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q3code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q4. Enter a number from the user if the number is between 0 to 40 then print “Fail”, 40 to 60 print “C grade”, 60 to 80 print “B grade”, 80 to 100 print “A grade”, otherwise “Invalid”?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q4code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q5. Enter a number from the user and check it is a decimal number or not?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q5code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q6. Enter a number from the user if it is negative then convert into positive and if positive then convert into negative, then print the number?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q6code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q7. Enter a character from the user and check that it is an alphabet?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q7code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q8. Enter a number from the user if it is negative then square the number and if it is positive then increment the number 20 times?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q8code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q9. Enter the number from the user it the number is negative or positive and find out of that number?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q9code')">Show Code</button>
+     
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q10. Enter two numbers from user and check which is the greater number and print the greater number?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q10code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q11. Enter a number from user and check it is divisible by 4 or not?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q11code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q12. Enter four characters from users and check they are equal or not?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q12code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q13. Enter three numbers from users and tell which is greater?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q13code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q14. Enter a number from the user. If the user enters 30 then print the months with 30 days, for 31 print months with 31 days, for 28 or 29 print the month, else print “Invalid”?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q14code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q15. Enter one digit number from user and print in words?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q15code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q16. Enter two characters from user and check both are same or not, if not same then find out difference between them?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q16code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q17. Enter three numbers from user and tell which is greater?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q17code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q18. Enter two digit number from user and print it in words (like 50 will be five zero)?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q18code')">Show Code</button>
+     
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q19. Enter a character from user and check if it is uppercase, lowercase, special character or number?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q19code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q20. Enter the year from user and check its leap year or not?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q20code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q21. Enter date, month, year and check it is valid date or not?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q21code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q22. Enter current date and DOB of user and find out difference?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q22code')">Show Code</button>
+      
+    </div>
+  </div>
+
+  <div class="ques-card">
+    <h3>Q23. Write a program to calculate area and perimeter of rectangle?</h3>
+    <div class="btn-area">
+      <button onclick="showCode('q23code')">Show Code</button>
+      
+    </div>
+  </div>
+
+</div>
+
+    <!-- c1 1 -->
+    <div id="q1code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q1code')">CLOSE</span>
+        <pre id="q1block">
+#include &lt;stdio.h&gt;
+int main(){
+   int num;
+   printf("Enter a number: ");
+   scanf("%d",&num);
+   if(num&gt;0)
+     printf("The entered number is positive.");
+   else if(num&lt;0)
+     printf("The entered number is negative.");
+   else
+     printf("The entered number is zero.");
+   return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter a number : 5
+The entered number is positive.</p>
+      </div>
+    </div>
+
+    <div id="q2code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q2code')">CLOSE</span>
+        <pre id="q2block">
+#include &lt;stdio.h&gt;
+int main(){
+  int n;
+  printf("Enter a number: ");
+  scanf("%d",&n);
+  if(n%2==0)
+    printf("The entered number is even.");
+  else
+    printf("The entered number is odd.");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter a number : 8
+The entered number is even.</p>
+      </div>
+    </div>
+
+    <div id="q3code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q3code')">CLOSE</span>
+        <pre id="q3block">
+#include &lt;stdio.h&gt;
+int main(){
+  int n, absn;
+  printf("Enter a number: ");
+  scanf("%d",&n);
+  absn = (n&lt;0)? -n : n;
+  if(absn &lt;= 9)
+    printf("The entered number is 1 digit.");
+  else if(absn &lt;= 99)
+    printf("The entered number is 2 digit.");
+  else if(absn &lt;= 999)
+    printf("The entered number is 3 digit.");
+  else if(absn &lt;= 9999)
+    printf("The entered number is 4 digit.");
+  else if(absn &lt;= 99999)
+    printf("The entered number is 5 digit.");
+  else
+    printf("The entered number has more than 5 digits.");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter a number : 456
+The entered number is 3 digit.</p>
+      </div>
+    </div>
+
+    <div id="q4code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q4code')">CLOSE</span>
+        <pre id="q4block">
+#include &lt;stdio.h&gt;
+int main(){
+  int marks;
+  printf("Enter marks (0-100): ");
+  scanf("%d",&marks);
+  if(marks &lt; 0 || marks &gt; 100)
+    printf("Invalid");
+  else if(marks &lt; 40)
+    printf("Fail");
+  else if(marks &lt; 60)
+    printf("C grade");
+  else if(marks &lt; 80)
+    printf("B grade");
+  else
+    printf("A grade");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter marks (0-100) : 72
+B grade</p>
+      </div>
+    </div>
+
+    <div id="q5code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q5code')">CLOSE</span>
+        <pre id="q5block">
+#include &lt;stdio.h&gt;
+int main(){
+  float num;
+  printf("Enter a number (can be decimal): ");
+  scanf("%f",&num);
+  if(num == (int)num)
+    printf("The entered number is not decimal.");
+  else
+    printf("The entered number is a decimal number.");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter a number (can be decimal) : 4.25
+The entered number is a decimal number.</p>
+      </div>
+    </div>
+
+    <div id="q6code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q6code')">CLOSE</span>
+        <pre id="q6block">
+#include &lt;stdio.h&gt;
+int main(){
+  int n;
+  printf("Enter a number: ");
+  scanf("%d",&n);
+  if(n &lt; 0)
+    n = -n;   /* negative -> positive */
+  else if(n &gt;= 0)
+    n = -n;   /* positive or zero -> negative */
+  printf("Converted number: %d", n);
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter a number : -12
+Converted number: 12</p>
+      </div>
+    </div>
+
+    <div id="q7code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q7code')">CLOSE</span>
+        <pre id="q7block">
+#include &lt;stdio.h&gt;
+int main(){
+  char ch;
+  printf("Enter a character: ");
+  scanf(" %c",&ch);
+  if( (ch&gt;='A' && ch&lt;='Z') || (ch&gt;='a' && ch&lt;='z') )
+    printf("The entered character is an alphabet.");
+  else
+    printf("The entered character is not an alphabet.");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter a character : g
+The entered character is an alphabet.</p>
+      </div>
+    </div>
+
+    <div id="q8code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q8code')">CLOSE</span>
+        <pre id="q8block">
+#include &lt;stdio.h&gt;
+int main(){
+  int n;
+  printf("Enter a number: ");
+  scanf("%d",&n);
+  if(n &lt; 0){
+    int sq = n * n;
+    printf("Square of the entered negative number is %d.", sq);
+  } else {
+    int i;
+    int value = n;
+    for(i=0;i&lt;20;i++) value++;
+    printf("Value after incrementing 20 times: %d.", value);
+  }
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter a number : 3
+Value after incrementing 20 times: 23</p>
+      </div>
+    </div>
+
+    <div id="q9code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q9code')">CLOSE</span>
+        <pre id="q9block">
+#include &lt;stdio.h&gt;
+int main(){
+  int n;
+  printf("Enter a number: ");
+  scanf("%d",&n);
+  if(n &lt; 0)
+    printf("The entered number is negative.\nAbsolute value = %d", -n);
+  else
+    printf("The entered number is positive or zero.\nAbsolute value = %d", n);
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter a number : -7
+The entered number is negative.
+Absolute value = 7</p>
+      </div>
+    </div>
+
+    <div id="q10code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q10code')">CLOSE</span>
+        <pre id="q10block">
+#include &lt;stdio.h&gt;
+int main(){
+  int a,b;
+  printf("Enter two numbers: ");
+  scanf("%d%d",&a,&b);
+  if(a &gt; b)
+    printf("The greater number is %d.", a);
+  else if(b &gt; a)
+    printf("The greater number is %d.", b);
+  else
+    printf("Both numbers are equal.");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter two numbers : 12 9
+The greater number is 12.</p>
+      </div>
+    </div>
+
+    <div id="q11code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q11code')">CLOSE</span>
+        <pre id="q11block">
+#include &lt;stdio.h&gt;
+int main(){
+  int n;
+  printf("Enter a number: ");
+  scanf("%d",&n);
+  if(n%4==0)
+    printf("The entered number is divisible by 4.");
+  else
+    printf("The entered number is not divisible by 4.");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter a number : 20
+The entered number is divisible by 4.</p>
+      </div>
+    </div>
+
+    <div id="q12code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q12code')">CLOSE</span>
+        <pre id="q12block">
+#include &lt;stdio.h&gt;
+int main(){
+  char a,b,c,d;
+  printf("Enter four characters separated by spaces: ");
+  scanf(" %c %c %c %c",&a,&b,&c,&d);
+  if(a==b && b==c && c==d)
+    printf("All four characters are equal.");
+  else
+    printf("Characters are not all equal.");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter four characters separated by spaces : a a a a
+All four characters are equal.</p>
+      </div>
+    </div>
+
+    <div id="q13code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q13code')">CLOSE</span>
+        <pre id="q13block">
+#include &lt;stdio.h&gt;
+int main(){
+  int x,y,z;
+  printf("Enter three numbers: ");
+  scanf("%d%d%d",&x,&y,&z);
+  if(x &gt;= y && x &gt;= z)
+    printf("%d is the greatest.", x);
+  else if(y &gt;= x && y &gt;= z)
+    printf("%d is the greatest.", y);
+  else
+    printf("%d is the greatest.", z);
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter three numbers : 5 17 9
+17 is the greatest.</p>
+      </div>
+    </div>
+
+    <div id="q14code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q14code')">CLOSE</span>
+        <pre id="q14block">
+#include &lt;stdio.h&gt;
+int main(){
+  int n;
+  printf("Enter days (28/29/30/31): ");
+  scanf("%d",&n);
+  if(n==30)
+    printf("Months with 30 days: Apr, Jun, Sep, Nov");
+  else if(n==31)
+    printf("Months with 31 days: Jan, Mar, May, Jul, Aug, Oct, Dec");
+  else if(n==28 || n==29)
+    printf("Month: Feb");
+  else
+    printf("Invalid");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter days (28/29/30/31) : 30
+Months with 30 days: Apr, Jun, Sep, Nov</p>
+      </div>
+    </div>
+
+    <div id="q15code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q15code')">CLOSE</span>
+        <pre id="q15block">
+#include &lt;stdio.h&gt;
+int main(){
+  int d;
+  printf("Enter one digit number: ");
+  scanf("%d",&d);
+  switch(d){
+    case 0: printf("Zero"); break;
+    case 1: printf("One"); break;
+    case 2: printf("Two"); break;
+    case 3: printf("Three"); break;
+    case 4: printf("Four"); break;
+    case 5: printf("Five"); break;
+    case 6: printf("Six"); break;
+    case 7: printf("Seven"); break;
+    case 8: printf("Eight"); break;
+    case 9: printf("Nine"); break;
+    default: printf("Invalid input");
+  }
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter one digit number : 7
+Seven</p>
+      </div>
+    </div>
+
+    <div id="q16code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q16code')">CLOSE</span>
+        <pre id="q16block">
+#include &lt;stdio.h&gt;
+int main(){
+  char a,b;
+  printf("Enter two characters separated by space: ");
+  scanf(" %c %c",&a,&b);
+  if(a==b)
+    printf("Both characters are same.");
+  else
+    printf("Characters differ by %d (ASCII difference).", (int)(a-b));
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter two characters separated by space : c f
+Characters differ by -3 (ASCII difference).</p>
+      </div>
+    </div>
+
+    <div id="q17code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q17code')">CLOSE</span>
+        <pre id="q17block">
+#include &lt;stdio.h&gt;
+int main(){
+  int a,b,c;
+  printf("Enter three numbers: ");
+  scanf("%d%d%d",&a,&b,&c);
+  if(a &gt;= b && a &gt;= c)
+    printf("%d is the greatest.", a);
+  else if(b &gt;= a && b &gt;= c)
+    printf("%d is the greatest.", b);
+  else
+    printf("%d is the greatest.", c);
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter three numbers : 22 22 10
+22 is the greatest.</p>
+      </div>
+    </div>
+
+    <div id="q18code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q18code')">CLOSE</span>
+        <pre id="q18block">
+#include &lt;stdio.h&gt;
+int main(){
+  int n;
+  printf("Enter two-digit number: ");
+  scanf("%d",&n);
+  int tens = n/10;
+  int ones = n%10;
+  /* Print tens place word */
+  switch(tens){
+    case 1: printf("Ten "); break;
+    case 2: printf("Twenty "); break;
+    case 3: printf("Thirty "); break;
+    case 4: printf("Forty "); break;
+    case 5: printf("Fifty "); break;
+    case 6: printf("Sixty "); break;
+    case 7: printf("Seventy "); break;
+    case 8: printf("Eighty "); break;
+    case 9: printf("Ninety "); break;
+    default: printf("");
+  }
+  /* Print ones place word (including zero as 'zero' if you want) */
+  switch(ones){
+    case 0: printf("zero"); break;
+    case 1: printf("one"); break;
+    case 2: printf("two"); break;
+    case 3: printf("three"); break;
+    case 4: printf("four"); break;
+    case 5: printf("five"); break;
+    case 6: printf("six"); break;
+    case 7: printf("seven"); break;
+    case 8: printf("eight"); break;
+    case 9: printf("nine"); break;
+  }
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter two-digit number : 50
+Fifty zero</p>
+      </div>
+    </div>
+
+    <div id="q19code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q19code')">CLOSE</span>
+        <pre id="q19block">
+#include &lt;stdio.h&gt;
+int main(){
+  char ch;
+  printf("Enter a character: ");
+  scanf(" %c",&ch);
+  if(ch &gt;= 'A' && ch &lt;= 'Z')
+    printf("The entered character is uppercase.");
+  else if(ch &gt;= 'a' && ch &lt;= 'z')
+    printf("The entered character is lowercase.");
+  else if(ch &gt;= '0' && ch &lt;= '9')
+    printf("The entered character is a digit.");
+  else
+    printf("The entered character is a special character.");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter a character : %
+The entered character is a special character.</p>
+      </div>
+    </div>
+
+    <div id="q20code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q20code')">CLOSE</span>
+        <pre id="q20block">
+#include &lt;stdio.h&gt;
+int main(){
+  int year;
+  printf("Enter the year: ");
+  scanf("%d",&year);
+  if((year%400==0) || (year%4==0 && year%100!=0))
+    printf("The year is a leap year.");
+  else
+    printf("The year is not a leap year.");
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter the year : 2024
+The year is a leap year.</p>
+      </div>
+    </div>
+
+    <div id="q21code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q21code')">CLOSE</span>
+        <pre id="q21block">
+#include &lt;stdio.h&gt;
+int main(){
+  int d,m,y;
+  printf("Enter date (dd mm yyyy): ");
+  scanf("%d%d%d",&d,&m,&y);
+  if(m &lt; 1 || m &gt; 12){
+    printf("Invalid date (month out of range).");
+  } else if(d &lt; 1 || d &gt; 31){
+    printf("Invalid date (day out of range).");
+  } else if(m==2){
+    if( (y%400==0) || (y%4==0 && y%100!=0) ){
+      if(d &gt; 29) printf("Invalid date for February in leap year.");
+      else printf("Valid date.");
+    } else {
+      if(d &gt; 28) printf("Invalid date for February.");
+      else printf("Valid date.");
+    }
+  } else if(m==4 || m==6 || m==9 || m==11){
+    if(d &gt; 30) printf("Invalid date for given month.");
+    else printf("Valid date.");
+  } else {
+    printf("Valid date.");
+  }
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output: Enter date (dd mm yyyy) : 29 02 2024
+Valid date.</p>
+      </div>
+    </div>
+
+    <div id="q22code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q22code')">CLOSE</span>
+        <pre id="q22block">
+#include &lt;stdio.h&gt;
+int main(){
+  int bd, bm, by;
+  int cd, cm, cy;
+  printf("Enter birth date (dd mm yyyy): ");
+  scanf("%d%d%d",&bd,&bm,&by);
+  printf("Enter current date (dd mm yyyy): ");
+  scanf("%d%d%d",&cd,&cm,&cy);
+  int ageYears = cy - by;
+  int ageMonths = cm - bm;
+  int ageDays = cd - bd;
+  if(ageDays &lt; 0){
+    ageDays += 30; /* simple borrowing, not exact calendar math */
+    ageMonths--;
+  }
+  if(ageMonths &lt; 0){
+    ageMonths += 12;
+    ageYears--;
+  }
+  printf("Age: %d years, %d months, %d days", ageYears, ageMonths, ageDays);
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output:
+Enter birth date (dd mm yyyy) : 15 08 2000<br>
+Enter current date (dd mm yyyy) : 05 11 2025<br>
+Age: 25 years, 2 months, 21 days</p>
+      </div>
+    </div>
+
+    <div id="q23code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q23code')">CLOSE</span>
+        <pre id="q23block">
+#include &lt;stdio.h&gt;
+int main(){
+  float length, breadth;
+  printf("Enter length and breadth: ");
+  scanf("%f%f",&length,&breadth);
+  float area = length * breadth;
+  float perimeter = 2 * (length + breadth);
+  printf("Area = %.2f\nPerimeter = %.2f", area, perimeter);
+  return 0;
+}
+        </pre>
+        <p class="output-text">Output:
+Enter length and breadth : 5 3<br>
+Area = 15.00
+Perimeter = 16.00</p>
+      </div>
+    </div>
+
+  </section>
+
+  <script >
+function showCode(id) {
+  const box = document.getElementById(id);
+  box.style.opacity = 1;
+  box.style.pointerEvents = "auto"; // make it clickable
+}
+
+function hideCode(id) {
+  const box = document.getElementById(id);
+  box.style.opacity = 0;
+  box.style.pointerEvents = "none"; // disable interaction
+}
+  </script>
+</body>
+</html>

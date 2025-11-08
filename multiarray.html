@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Language Basics</title>
+  <link rel="stylesheet" href="style_c_site.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 id="logo">C Programs</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Topics</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="main-box">
+    <h2 id="heading">MULTI-DIMENSION ARRAYS</h2>
+<div class="ques-list">
+<div class="ques-card">
+  <h3>Q1. Enter an array from user and display all the values?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q1code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q2. Enter an array from user and print the array in reverse order?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q2code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q3. Enter an array from user and copy the array into second array?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q3code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q4. Enter an array from user and copy it into another array in reverse order?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q4code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q5. Enter an array from user and print the numbers which are even?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q5code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q6. Enter an array from user and print the numbers which are positive?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q6code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q7. Enter an array from user and square all the values of array?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q7code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q8. Enter 5 values of array from user and print odd numbers of array?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q8code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q9. Enter 5 values of array from user and add all values?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q9code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q10. Enter 5 values of array from user, then enter a value to search. If found print “found” else print “not found”?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q10code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q11. Enter five values of array and sort in ascending order?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q11code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q12. Find maximum value of an array?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q12code')">Show Code</button>
+
+  </div>
+</div>
+
+<div class="ques-card">
+  <h3>Q13. Find minimum value of an array?</h3>
+  <div class="btn-area">
+    <button onclick="showCode('q13code')">Show Code</button>
+
+  </div>
+</div>
+
+<!-- Q1 -->
+<div id="q1code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q1code')">CLOSE</span>
+    <pre id="q1block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[2][2];
+    printf("Enter elements for a 2x2 matrix:\n");
+    for(int i=0;i&lt;2;i++)
+        for(int j=0;j&lt;2;j++){
+            printf("Enter element at row %d, column %d: ", i+1, j+1);
+            scanf("%d", &arr[i][j]);
+        }
+
+    printf("\nAll entered values:\n");
+    for(int i=0;i&lt;2;i++){
+        for(int j=0;j&lt;2;j++)
+            printf("%d\t", arr[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter elements for a 2x2 matrix:<br>
+Enter element at row 1, column 1: 5<br>
+Enter element at row 1, column 2: 3<br>
+Enter element at row 2, column 1: -2<br>
+Enter element at row 2, column 2: 7<br><br>
+
+All entered values:<br>
+5    3<br>
+-2   7<br>
+</p>
+  </div>
+</div>
+
+<!-- Q2 -->
+<div id="q2code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q2code')">CLOSE</span>
+    <pre id="q2block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[2][2];
+    printf("Enter elements for a 2x2 matrix:\n");
+    for(int i=0;i&lt;2;i++)
+        for(int j=0;j&lt;2;j++){
+            printf("Enter element at row %d, column %d: ", i+1, j+1);
+            scanf("%d", &arr[i][j]);
+        }
+
+    printf("\nArray in reverse order:\n");
+    for(int i=1;i&gt;=0;i--){
+        for(int j=1;j&gt;=0;j--)
+            printf("%d\t", arr[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter elements for a 2x2 matrix:<br>
+Enter element at row 1, column 1: 5<br>
+Enter element at row 1, column 2: 3<br>
+Enter element at row 2, column 1: -2<br>
+Enter element at row 2, column 2: 7<br><br>
+
+Array in reverse order:<br>
+7   -2<br>
+3    5
+</p>
+  </div>
+</div>
+
+<!-- Q3 -->
+<div id="q3code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q3code')">CLOSE</span>
+    <pre id="q3block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[2][2], copy[2][2];
+    printf("Enter elements for a 2x2 matrix:\n");
+    for(int i=0;i&lt;2;i++)
+        for(int j=0;j&lt;2;j++){
+            printf("Enter element at row %d, column %d: ", i+1, j+1);
+            scanf("%d", &arr[i][j]);
+            copy[i][j] = arr[i][j];
+        }
+
+    printf("\nCopied array:\n");
+    for(int i=0;i&lt;2;i++){
+        for(int j=0;j&lt;2;j++)
+            printf("%d\t", copy[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter elements for a 2x2 matrix:<br>
+Enter element at row 1, column 1: 5<br>
+Enter element at row 1, column 2: 3<br>
+Enter element at row 2, column 1: -2<br>
+Enter element at row 2, column 2: 7<br><br>
+
+Copied array:<br>
+5    3<br>
+-2   7
+</p>
+  </div>
+</div>
+
+<!-- Q4 -->
+<div id="q4code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q4code')">CLOSE</span>
+    <pre id="q4block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[2][2], rev[2][2];
+    printf("Enter elements for a 2x2 matrix:\n");
+    for(int i=0;i&lt;2;i++)
+        for(int j=0;j&lt;2;j++){
+            printf("Enter element at row %d, column %d: ", i+1, j+1);
+            scanf("%d", &arr[i][j]);
+        }
+
+    for(int i=0;i&lt;2;i++)
+        for(int j=0;j&lt;2;j++)
+            rev[i][j] = arr[1-i][1-j];
+
+    printf("\nArray copied in reverse order:\n");
+    for(int i=0;i&lt;2;i++){
+        for(int j=0;j&lt;2;j++)
+            printf("%d\t", rev[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter elements for a 2x2 matrix:<br>
+Enter element at row 1, column 1: 5<br>
+Enter element at row 1, column 2: 3<br>
+Enter element at row 2, column 1: -2<br>
+Enter element at row 2, column 2: 7<br><br>
+
+Array copied in reverse order:<br>
+7   -2<br>
+3    5
+</p>
+  </div>
+</div>
+
+<!-- Q5 -->
+<div id="q5code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q5code')">CLOSE</span>
+    <pre id="q5block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[2][2];
+    printf("Enter elements for a 2x2 matrix:\n");
+    for(int i=0;i&lt;2;i++)
+        for(int j=0;j&lt;2;j++){
+            printf("Enter element at row %d, column %d: ", i+1, j+1);
+            scanf("%d", &arr[i][j]);
+        }
+
+    printf("\nEven numbers in the matrix:\n");
+    int found=0;
+    for(int i=0;i&lt;2;i++)
+        for(int j=0;j&lt;2;j++)
+            if(arr[i][j]%2==0){
+                printf("%d at position [%d][%d]\n", arr[i][j], i+1, j+1);
+                found=1;
+            }
+    if(!found) printf("No even numbers found.\n");
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter elements for a 2x2 matrix:<br>
+Enter element at row 1, column 1: 5<br>
+Enter element at row 1, column 2: 3<br>
+Enter element at row 2, column 1: -2<br>
+Enter element at row 2, column 2: 7<br><br>
+
+Even numbers in the matrix:<br>
+-2 at position [2][1]
+</p>
+  </div>
+</div>
+
+
+<!-- Q6 -->
+<div id="q6code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q6code')">CLOSE</span>
+    <pre id="q6block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[2][2];
+    printf("Enter elements for a 2x2 matrix:\n");
+    for(int i=0;i&lt;2;i++)
+        for(int j=0;j&lt;2;j++){
+            printf("Enter element at row %d, column %d: ", i+1, j+1);
+            scanf("%d", &arr[i][j]);
+        }
+
+    printf("\nPositive numbers in the matrix:\n");
+    int found=0;
+    for(int i=0;i&lt;2;i++)
+        for(int j=0;j&lt;2;j++)
+            if(arr[i][j]&gt;0){
+                printf("%d at position [%d][%d]\n", arr[i][j], i+1, j+1);
+                found=1;
+            }
+    if(!found) printf("No positive numbers found.\n");
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter elements for a 2x2 matrix:<br>
+Enter element at row 1, column 1: -1<br>
+Enter element at row 1, column 2: 3<br>
+Enter element at row 2, column 1: -2<br>
+Enter element at row 2, column 2: 7<br><br>
+
+Positive numbers in the matrix:<br>
+3 at position [1][2]<br>
+7 at position [2][2]
+</p>
+  </div>
+</div>
+
+<!-- Q7 -->
+<div id="q7code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q7code')">CLOSE</span>
+    <pre id="q7block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[2][2];
+    printf("Enter elements for a 2x2 matrix:\n");
+    for(int i=0;i&lt;2;i++)
+        for(int j=0;j&lt;2;j++){
+            printf("Enter element at row %d, column %d: ", i+1, j+1);
+            scanf("%d", &arr[i][j]);
+        }
+
+    printf("\nSquares of all elements:\n");
+    for(int i=0;i&lt;2;i++){
+        for(int j=0;j&lt;2;j++)
+            printf("%d\t", arr[i][j]*arr[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter elements for a 2x2 matrix:<br>
+Enter element at row 1, column 1: 2<br>
+Enter element at row 1, column 2: 3<br>
+Enter element at row 2, column 1: -1<br>
+Enter element at row 2, column 2: 4<br><br>
+
+Squares of all elements:<br>
+4    9<br>
+1    16
+</p>
+  </div>
+</div>
+
+<!-- Q8 -->
+<div id="q8code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q8code')">CLOSE</span>
+    <pre id="q8block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[5];
+    printf("Enter 5 values of the array:\n");
+    for(int i=0;i&lt;5;i++){
+        printf("Enter value %d: ", i+1);
+        scanf("%d", &arr[i]);
+    }
+
+    printf("\nOdd numbers in the array:\n");
+    int found=0;
+    for(int i=0;i&lt;5;i++)
+        if(arr[i]%2!=0){
+            printf("%d at position [%d]\n", arr[i], i+1);
+            found=1;
+        }
+    if(!found) printf("No odd numbers found.\n");
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter 5 values of the array:<br>
+Enter value 1: 2<br>
+Enter value 2: 7<br>
+Enter value 3: 4<br>
+Enter value 4: 5<br>
+Enter value 5: 8<br><br>
+
+Odd numbers in the array:<br>
+7 at position [2]<br>
+5 at position [4]
+</p>
+  </div>
+</div>
+
+<!-- Q9 -->
+<div id="q9code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q9code')">CLOSE</span>
+    <pre id="q9block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[5], sum=0;
+    printf("Enter 5 values of the array:\n");
+    for(int i=0;i&lt;5;i++){
+        printf("Enter value %d: ", i+1);
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+    }
+
+    printf("\nSum of all elements: %d\n", sum);
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter 5 values of the array:<br>
+Enter value 1: 2<br>
+Enter value 2: 7<br>
+Enter value 3: 4<br>
+Enter value 4: 5<br>
+Enter value 5: 8<br><br>
+
+Sum of all elements: 26
+</p>
+  </div>
+</div>
+
+<!-- Q10 -->
+<div id="q10code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q10code')">CLOSE</span>
+    <pre id="q10block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[5], val, found=0;
+    printf("Enter 5 values of the array:\n");
+    for(int i=0;i&lt;5;i++){
+        printf("Enter value %d: ", i+1);
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Enter a value to search: ");
+    scanf("%d", &val);
+
+    for(int i=0;i&lt;5;i++)
+        if(arr[i]==val) found=1;
+
+    if(found) printf("Value %d found in the array.\n", val);
+    else printf("Value %d not found in the array.\n", val);
+
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter 5 values of the array:<br>
+Enter value 1: 2<br>
+Enter value 2: 7<br>
+Enter value 3: 4<br>
+Enter value 4: 5<br>
+Enter value 5: 8<br>
+Enter a value to search: 5<br><br>
+
+Value 5 found in the array.
+</p>
+  </div>
+</div>
+
+<!-- Q11 -->
+<div id="q11code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q11code')">CLOSE</span>
+    <pre id="q11block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[5], temp;
+    printf("Enter 5 values of the array:\n");
+    for(int i=0;i&lt;5;i++){
+        printf("Enter value %d: ", i+1);
+        scanf("%d", &arr[i]);
+    }
+
+    // Bubble sort ascending
+    for(int i=0;i&lt;5-1;i++)
+        for(int j=0;j&lt;5-i-1;j++)
+            if(arr[j]&gt;arr[j+1]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+
+    printf("\nArray in ascending order:\n");
+    for(int i=0;i&lt;5;i++) printf("%d ", arr[i]);
+    printf("\n");
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter 5 values of the array:<br>
+Enter value 1: 5<br>
+Enter value 2: 2<br>
+Enter value 3: 8<br>
+Enter value 4: 1<br>
+Enter value 5: 4<br><br>
+
+Array in ascending order:<br>
+1 2 4 5 8
+</p>
+  </div>
+</div>
+
+<!-- Q12 -->
+<div id="q12code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q12code')">CLOSE</span>
+    <pre id="q12block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[5];
+    printf("Enter 5 values of the array:\n");
+    for(int i=0;i&lt;5;i++){
+        printf("Enter value %d: ", i+1);
+        scanf("%d", &arr[i]);
+    }
+
+    int max = arr[0];
+    for(int i=1;i&lt;5;i++)
+        if(arr[i]&gt;max) max = arr[i];
+
+    printf("\nMaximum value in the array: %d\n", max);
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter 5 values of the array:<br>
+Enter value 1: 5<br>
+Enter value 2: 2<br>
+Enter value 3: 8<br>
+Enter value 4: 1<br>
+Enter value 5: 4<br><br>
+
+Maximum value in the array: 8
+</p>
+  </div>
+</div>
+
+<!-- Q13 -->
+<div id="q13code" class="code-box">
+  <div class="inner-code">
+    <span class="close" onclick="hideCode('q13code')">CLOSE</span>
+    <pre id="q13block">
+#include &lt;stdio.h&gt;
+int main(){
+    int arr[5];
+    printf("Enter 5 values of the array:\n");
+    for(int i=0;i&lt;5;i++){
+        printf("Enter value %d: ", i+1);
+        scanf("%d", &arr[i]);
+    }
+
+    int min = arr[0];
+    for(int i=1;i&lt;5;i++)
+        if(arr[i]&lt;min) min = arr[i];
+
+    printf("\nMinimum value in the array: %d\n", min);
+    return 0;
+}
+    </pre>
+    <p class="output-text">Output:
+Enter 5 values of the array:<br>
+Enter value 1: 5<br>
+Enter value 2: 2<br>
+Enter value 3: 8<br>
+Enter value 4: 1<br>
+Enter value 5: 4<br><br>
+
+Minimum value in the array: 1
+</p>
+  </div>
+</div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function showCode(id) {
+  const box = document.getElementById(id);
+  box.style.opacity = 1;
+  box.style.pointerEvents = "auto"; // make it clickable
+}
+
+function hideCode(id) {
+  const box = document.getElementById(id);
+  box.style.opacity = 0;
+  box.style.pointerEvents = "none"; // disable interaction
+}
+</script>
+
+</body>
+</html>

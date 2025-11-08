@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Language Basics</title>
+  <link rel="stylesheet" href="style_c_site.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <h1 id="logo">C Programs</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Topics</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="main-box">
+    <h2 id="heading">OPERATORS</h2>
+
+    <div class="ques-list">
+
+      <div class="ques-card">
+        <h3>Q1. Write a program to show that example of pre-increment ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q1code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q2. Write a program to show that example of post-increment ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q2code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q3.Write a program to show that example of pre-decrement ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q3code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q4.Write a program to show that example of post-decrement ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q4code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q5.Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number
+          from user subtract the number display the answer ,again take 2 number from user multiply the number display
+          the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number
+          find the remainder and display the answer ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q5code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q6. Write a program to enter a number from the user ,the length of the number is depend on the user
+          ,programmer should print the last digit of number ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q6code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q7.Enter a decimal number from the user (float) and print the right hand side of the decimal point ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q7code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q8Enter a number from user and find out cube of numbers ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q8code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q9 Enter float number from user and round of the number ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q9code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q10.Enter a lower case character from user and print it into upper case ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q10code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q11.Enter marks of students and calculate average of student’s marks ?</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q11code')">Show Code</button>
+
+        </div>
+      </div>
+
+      <div class="ques-card">
+        <h3>Q12.Calculate simple interest = (P x R x T)/ 100</h3>
+        <div class="btn-area">
+          <button onclick="showCode('q12code')">Show Code</button>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- c1  -->
+    <div id="q1code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q1code')">CLOSE</span>
+        <pre id="q1block">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    int a = 5, b;
+
+    b = ++a;   // pre-increment: a is increased first, then assigned to b
+
+    printf("Value of a = %d\n", a);
+    printf("Value of b = %d\n", b);
+}
+
+        </pre>
+        <p class="output-text">Output: Value of a = 6<br>
+          Value of b = 6
+        </p>
+      </div>
+    </div>
+
+    <!-- d2  -->
+    <div id="q2code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q2code')">close</span>
+        <pre id="q2block">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    int a = 5, b;
+
+    b = a++;   // post-increment: assign first, THEN increase
+
+    printf("Value of a = %d\n", a);
+    printf("Value of b = %d\n", b);
+}
+
+        </pre>
+        <p class="output-text">Output: Value of a = 6<br>
+          Value of b = 5
+        </p>
+      </div>
+    </div>
+    <!-- d3  -->
+    <div id="q3code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q3code')">close</span>
+        <pre id="q3block">
+          #include &lt;stdio.h&gt;
+
+void main()
+{
+    int a = 10, b;
+
+    b = --a;   // pre-decrement: decrease first, then assign
+
+    printf("Value of a = %d\n", a);
+    printf("Value of b = %d\n", b);
+}
+        </pre>
+        <p class="output-text">Output: Value of a = 9<br>
+          Value of b = 9
+        </p>
+      </div>
+    </div>
+
+    <!-- d4  -->
+    <div id="q4code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q4code')">close</span>
+        <pre id="q4block">
+#include &lt;stdio.h&gt;
+void main()
+{
+    int a = 10, b;
+
+    b = a--;   // post-decrement: assign first, THEN decrease
+
+    printf("Value of a = %d\n", a);
+    printf("Value of b = %d\n", b); 
+}
+        </pre>
+        <p class="output-text">Output: Value of a = 9<br>
+          Value of b = 10
+        </p>
+      </div>
+    </div>
+    <!-- d5  -->
+    <div id="q5code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q5code')">close</span>
+        <pre id="q5block">
+          #include &lt;stdio.h&gt;
+
+void main()
+{
+    int a, b, sum, sub, mul, rem;
+    float div;
+
+    // Addition
+    printf("Enter two numbers for addition: ");
+    scanf("%d%d", &a, &b);
+    sum = a + b;
+    printf("Sum = %d\n\n", sum);
+
+    // Subtraction
+    printf("Enter two numbers for subtraction: ");
+    scanf("%d%d", &a, &b);
+    sub = a - b;
+    printf("Subtraction = %d\n\n", sub);
+
+    // Multiplication
+    printf("Enter two numbers for multiplication: ");
+    scanf("%d%d", &a, &b);
+    mul = a * b;
+    printf("Multiplication = %d\n\n", mul);
+
+    // Division
+    printf("Enter two numbers for division: ");
+    scanf("%d%d", &a, &b);
+    div = (float)a / b;  // typecasting for accurate float result
+    printf("Division = %.2f\n\n", div);
+
+    // Remainder
+    printf("Enter two numbers to find remainder: ");
+    scanf("%d%d", &a, &b);
+    rem = a % b;
+    printf("Remainder = %d\n", rem);
+}
+        </pre>
+        <p class="output-text">Output: <br>Enter two numbers for addition: 5 3<br>
+          Sum = 8<br><br>
+
+          Enter two numbers for subtraction: 9 4<br>
+          Subtraction = 5<br><br>
+
+          Enter two numbers for multiplication: 6 7<br>
+          Multiplication = 42<br><br>
+
+          Enter two numbers for division: 10 2<br>
+          Division = 5.00<br><br>
+
+          Enter two numbers to find remainder: 10 3<br>
+          Remainder = 1
+        </p>
+      </div>
+    </div>
+    <!-- d6  -->
+    <div id="q6code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q6code')">close</span>
+        <pre id="q6block">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    int num, lastDigit;
+
+    printf("Enter any number: ");
+    scanf("%d", &num);
+
+    lastDigit = num % 10;   // modulo gives remainder (last digit)
+    printf("The last digit of the number is: %d", lastDigit);
+}
+
+        </pre>
+        <p class="output-text">Output: Enter any number: 98765<br>
+          The last digit of the number is: 5
+
+        </p>
+      </div>
+    </div>
+    <!-- d7  -->
+    <div id="q7code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q7code')">close</span>
+        <pre id="q7block">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    float num;
+    int intPart, rightPart;
+
+    printf("Enter any decimal number: ");
+    scanf("%f", &num);
+
+    intPart = (int)num;             // take integer part
+    rightPart = (num - intPart) * 10000;  // multiply to shift decimals (4 digits)
+
+    printf("Digits after decimal point: %d", rightPart);
+}</pre>
+        <p class="output-text">Output: Enter any decimal number: 45.6789<br>
+          Digits after decimal point: 6789
+        </p>
+      </div>
+    </div>
+
+
+    <!-- d8  -->
+    <div id="q8code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q8code')">close</span>
+        <pre id="q8block">
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    int num, cube;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    cube = num * num * num;   // formula for cube
+
+    printf("Cube of %d is: %d", num, cube);
+}
+
+
+        </pre>
+        <p class="output-text">Output: Enter a number: 5<br>
+          Cube of 5 is: 125
+
+      </div>
+    </div>
+
+    <!-- d9  -->
+    <div id="q9code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q9code')">close</span>
+        <pre id="q9block">
+          #include &lt;stdio.h&gt;
+
+void main()
+{
+    float num;
+    int rounded;
+
+    printf("Enter any decimal number: ");
+    scanf("%f", &num);
+
+    rounded = (num >= 0) ? (int)(num + 0.5) : (int)(num - 0.5);<br>//rounding using "Ternary Operator"
+
+    printf("Rounded value = %d", rounded);
+}
+</pre>
+        <p class="output-text">Output: Enter any decimal number: 4.6<br>
+          Rounded value = 5
+        </p>
+      </div>
+    </div>
+
+    <!-- d10  -->
+    <div id="q10code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q10code')">close</span>
+        <pre id="q10block">
+          #include &lt;stdio.h&gt;
+
+void main()
+{
+    char ch;
+
+    printf("Enter a lowercase character: ");
+    scanf("%c", &ch);
+
+    ch = ch - 32;   // ASCII difference between lowercase and uppercase
+
+    printf("Uppercase character: %c", ch);
+}
+        </pre>
+        <p class="output-text">Output: Enter a lowercase character: b<br>
+          Uppercase character: B
+        </p>
+      </div>
+    </div>
+
+    <!-- d11  -->
+    <div id="q11code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q11code')">close</span>
+        <pre id="q11block">
+          #include &lt;stdio.h&gt;
+
+void main()
+{
+    float m1, m2, m3, m4, m5, avg;
+
+    printf("Enter marks of 5 subjects: ");
+    scanf("%f %f %f %f %f", &m1, &m2, &m3, &m4, &m5);
+
+    avg = (m1 + m2 + m3 + m4 + m5) / 5;
+
+    printf("Average marks = %.2f", avg);
+}
+        </pre>
+        <p class="output-text">Output: Enter marks of 5 subjects: 80 75 90 85 95<br>
+          Average marks = 85.00
+        </p>
+      </div>
+    </div>
+
+    <!-- d12  -->
+    <div id="q12code" class="code-box">
+      <div class="inner-code">
+        <span class="close" onclick="hideCode('q12code')">close</span>
+        <pre id="q12block">
+          #include &lt;stdio.h&gt;
+
+         void main()
+         {
+              float P, R, T, SI;
+
+              printf("Enter Principal (P): ");
+             scanf("%f", &P);
+
+             printf("Enter Rate of Interest (R): ");
+             scanf("%f", &R);
+
+              printf("Enter Time in years (T): ");
+             scanf("%f", &T);
+
+              SI = (P * R * T) / 100;
+
+              printf("Simple Interest = %.2f", SI);
+          }
+        </pre>
+        <p class="output-text">Output: Enter Principal (P): 10000<br>
+          Enter Rate of Interest (R): 5<br>
+          Enter Time in years (T): 2<br>
+          Simple Interest = 1000.00
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <script>
+    function showCode(id) {
+      const box = document.getElementById(id);
+      box.style.opacity = 1;
+      box.style.pointerEvents = "auto"; // make it clickable
+    }
+
+    function hideCode(id) {
+      const box = document.getElementById(id);
+      box.style.opacity = 0;
+      box.style.pointerEvents = "none"; // disable interaction
+    }
+  </script>
+</body>
+
+</html>
