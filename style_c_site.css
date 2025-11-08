@@ -10,6 +10,11 @@
 
 /* ===== BODY ===== */
 body {
+  visibility: visible;
+  background: #fefefe; /* or your normal page color */
+}
+
+body {
   background: linear-gradient(120deg, #e0f7fa, #ffffff, #e3f2fd);
   background-size: cover;
   color: #1a1a1a;
@@ -224,6 +229,7 @@ body {
 }
 
 /* ===== CODE BOX ===== */
+
 .code-box {
   position: fixed;
   top: 0;
@@ -237,9 +243,11 @@ body {
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease-in-out;
   z-index: 100;
+  will-change: opacity; /* 👈 helps mobile browsers render faster */
 }
+
 
 .inner-code {
   background: #ffffff;
